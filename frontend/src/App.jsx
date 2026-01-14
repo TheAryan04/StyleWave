@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Checkout from "./pages/Checkout/Checkout";
 import Order from "./pages/Order/Order";
 
-export const backendUrl = "http://localhost:5000";
+export const backendUrl = "https://backend-stylewave.vercel.app/";
 
 const App = () => {
   return (
