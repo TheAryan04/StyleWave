@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 // Allow Preflight Requests for CORS
 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174", "https://backend-stylewave.vercel.app/"];
+const allowedOrigins = ["https://style-wave.vercel.app/", "http://localhost:5174", "https://backend-stylewave.vercel.app/"];
 
 app.use(
     cors({
