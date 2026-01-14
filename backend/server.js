@@ -10,7 +10,7 @@ import orderRouter from './routes/orderRoute.js';
 
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = "https://backend-stylewave.vercel.app/"
 
 //middleware
 app.use(express.json());
