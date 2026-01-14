@@ -10,7 +10,7 @@ import orderRouter from './routes/orderRoute.js';
 
 
 const app = express();
-const PORT = "https://backend-stylewave.vercel.app"
+const PORT = 5000;
 
 //middleware
 app.use(express.json());
@@ -23,15 +23,24 @@ app.use((req, res, next) => {
 
 // Allow Preflight Requests for CORS
 
-const allowedOrigins = ["https://style-wave.vercel.app/", "https://style-wave-admin.vercel.app/"];
+const allowedOrigins = ["https://style-wave.vercel.app", "https://style-wave-admin.vercel.app", "http://localhost:5173", "http://localhost:5174"];
 
 app.use(
-    cors({
-        origin: allowedOrigins,
-        credentials: true, // Allow cookies to be sent
-        methods: ["GET", "POST", "PUT", "DELETE"],
-    })
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  })
 );
+
+app.options("*", cors());
 
 // api endpoints
 app.get("/", (_,res) => {
