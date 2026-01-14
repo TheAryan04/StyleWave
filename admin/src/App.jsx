@@ -8,7 +8,7 @@ import Login from "./components/Login/Login.jsx";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const backendUrl = 'https://backend-stylewave.vercel.app/';
+export const backendUrl = 'https://backend-stylewave.vercel.app';
 export const currency = '$'
 
 const App = () => {
