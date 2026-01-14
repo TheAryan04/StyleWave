@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import placeholder from "../../assets/placeholder.png";
+import placeholder from "../../assets/Placeholder.png";
 import "./Add.css";
 import axios from "axios";
 import { backendUrl } from "../../App.jsx";
