@@ -5,10 +5,10 @@ import Add from "./pages/Add/Add.jsx";
 import List from "./pages/List/List.jsx";
 import Orders from "./pages/Orders/Orders.jsx";
 import Login from "./components/Login/Login.jsx";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const backendUrl = 'http://localhost:5000';
+export const backendUrl = 'https://backend-stylewave.vercel.app/';
 export const currency = '$'
 
 const App = () => {
